@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route  , Navigate } from "react-router-dom";
 
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -26,6 +26,10 @@ function App() {
           path="/register"
           element={<Register />}
         />
+        <Route
+  path="/"
+  element={<Navigate to="/login" />}
+/>
 
         <Route
           path="/login"

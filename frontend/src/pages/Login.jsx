@@ -38,7 +38,7 @@ function Login() {
         response.data
       );
 
-      localStorage.setItem(
+       localStorage.setItem(
         "access_token",
         response.data.access
       );
@@ -74,7 +74,7 @@ function Login() {
           ?.message ||
           "Login Failed"
       );
-    } finally {
+     } finally {
       setLoading(false);
     }
   };
@@ -143,6 +143,12 @@ function Login() {
                     : "Login"}
                 </button>
               </form>
+                <p className="text-center mt-3">
+  Don't have an account?{" "}
+  <a href="/register" className="text-primary">
+    Register Here
+  </a>
+</p>
 
             </div>
           </div>
